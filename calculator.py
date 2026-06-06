@@ -1,8 +1,14 @@
 def divide(a, b):
-    return a / b  # crashed bei b=0
+    if b == 0:
+        return None
+    return a / b
 
 def average(numbers):
-    return sum(numbers) / len(numbers)  # crashed bei leerem list
+    if len(numbers) == 0:
+        return None
+    return sum(numbers) / len(numbers)
 
 def first_element(lst):
-    return lst[0]  # crashed bei leerem list
+    if len(lst) == 0:
+        return None
+    return lst[0]
