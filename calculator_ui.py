@@ -143,7 +143,10 @@ class Calculator:
                 parts = safe.split("/")
                 a = float(parts[0].strip())
                 b = float(parts[1].strip())
-                result = divide(a, b)  # crashed hier bei b=0
+                result = divide(a, b)
+                if result is None:
+                    self.display_var.set("Error")
+                    return
             else:
                 result = eval(safe)
 
